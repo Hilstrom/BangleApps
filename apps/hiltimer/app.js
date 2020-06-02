@@ -1,9 +1,9 @@
-var counter = 10;
+var counter = 15;
 var counterInterval;
 
 function outOfTime() {
   if (counterInterval) return;
-  E.showMessage("Out of Time", "My Timer");
+  E.showMessage("Out of Time", "Hilli Timer");
   Bangle.buzz();
   Bangle.beep(200, 4000)
     .then(() => new Promise(resolve => setTimeout(resolve,200)))
@@ -33,7 +33,7 @@ function countDown() {
 }
 
 function startTimer() {
-  counter = 10;
+  counter = 15;
   countDown();
   if (!counterInterval)
     counterInterval = setInterval(countDown, 1000);
