@@ -98,8 +98,8 @@ function changeState() {
 function drawLabels() {
   g.clear();
   g.setFontAlign(-1, 0);
-  g.setFont("6x8", 7);
-  g.drawString(`+  +`, 35, 180);
+  g.setFont("6x8", 3);
+  g.drawString(`+2    +30`, 35, 180);
   g.setFontAlign(0, 0, 3);
   g.setFont("6x8", 1);
   g.drawString(`reset                   (re)start`, 230, 120);
@@ -129,7 +129,7 @@ function addWatch() {
   {
     repeat: false,
     edge: "falling",
-  },
+  }
   );
   setWatch(
     () => {
@@ -144,7 +144,7 @@ function addWatch() {
   );
   setWatch(
     () => {
-      set(60);
+      set(120);
     },
     BTN4,
     {
@@ -153,7 +153,7 @@ function addWatch() {
       edge: "falling"
     }
   );
-  setWatch(() => set(1), BTN5, {
+  setWatch(() => set(30), BTN5, {
     debounce: DEBOUNCE,
     repeat: true,
     edge: "falling"
